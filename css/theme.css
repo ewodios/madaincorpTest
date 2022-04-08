@@ -1,0 +1,232 @@
+body, input, button {
+	font-family: 'century gothic', tahoma, sans-serif;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.center-box {
+	display: block;
+	width: 350px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.teal-color {
+	color: #009688;
+}
+
+
+.button {
+	float: right;
+    border-radius: 12px;
+    background-color: #2196f3;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    padding: 5px 12px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+	font-size: 15px;
+    font-weight: bold;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\2192';
+  position: absolute;
+  opacity: 0;
+  top: -1px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.input-text {
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 2px solid #eee;
+	width: 200px;
+}
+
+/* ROWS CONTAINER */
+.resultsBox {
+	 opacity: 1;
+	 transition: opacity 5s linear;
+	 min-height: 100px;
+}
+.record-row {
+    display: block;
+    position: relative;
+    height: 50px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    width: calc(100% - 12px);
+
+}
+
+.profile-pic-container {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 3;
+    background: #673ab7;
+    border-radius: 100%;
+    color: #FFF;
+}
+
+.name-container {
+    display: inline-block;
+    margin-left: 12px;
+    font-weight: bold;
+    width: calc(100% - 62px);
+}
+
+.category-container {
+    position: absolute;
+    font-size: 12px;
+    background: #2196f3;
+    color: #FFF;
+    padding: 2px 5px;
+    border-radius: 12px;
+    right: 5px;
+    bottom: 5px;
+}
+
+/* CATEGORIES PILLS */
+
+.button-group-pills {
+    margin: 20px 0;
+}
+
+
+input[type="checkbox"].graphic {
+    position: absolute;
+    z-index: 999;
+    background: none;
+    border: none;
+    height: 20px;
+    opacity: 0;
+    width: calc(100% - 10px);
+    cursor: pointer;
+}
+
+.pill-btn {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+input[type="checkbox"].graphic + label {
+    position: relative;
+    display: block;
+    margin-right: 5px;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 13px;
+    font-weight: bold;
+	color: #607d8b;
+    border: 1px solid;
+
+}
+
+input[type="checkbox"].graphic + label:hover, input[type="checkbox"].graphic:checked + label:hover {
+    border: 1px solid #2196f3;
+    background: #03a9f4;
+    color: #FFF;
+}
+
+input[type="checkbox"].graphic + label:active, input[type="checkbox"].graphic:checked + label:active {
+    border: 1px solid #2196f3;
+    background: #03a9f4;
+    color: #FFF;
+}
+
+input[type="checkbox"].graphic:checked + label {
+    border: 1px solid #2196f3;
+    background: #03a9f4;
+    color: #FFF;
+}
+
+/* LOADING ANIMATION */
+.LoadingScreen {
+	 opacity: 1;
+	 transition: opacity 0.6s linear;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 2s linear;
+} 
+
+.load-icon {
+	width: 100px;
+	height: 20px;
+}
+.load-icon span {
+	position: absolute;
+	display: inline-block;
+	background: #222;
+	width: 20%;
+	height: 100%;
+	border-radius: 100px;
+}
+.load-icon span:nth-of-type(1) {
+	left: 0;
+}
+
+.load-icon span:nth-of-type(2) {
+	left: 40%;
+}
+
+.load-icon span:nth-of-type(3) {
+	right: 0;
+}
+
+.load-icon span {
+	animation-name: loading;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+.load-icon span:nth-of-type(2) {
+	animation-delay: .2s;
+}
+.load-icon span:nth-of-type(3) {
+	animation-delay: .4s;
+}
+
+@keyframes loading {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
